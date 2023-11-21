@@ -4,7 +4,20 @@
 - Transform it through parsers, nokogiri or selenium
 - Load structured data into a CSV
 
-## web scraping
+## Gemfile requirements
+```
+# For web-scraping
+gem "nokogiri"
+gem "httparty"
+gem "csv"
+## for dynamic pages
+gem "selenium-webdriver"
+gem "webdrivers"
+```
+## Ruby code
+[app/lib/tasks/scrape.rake](https://github.com/fall-2023/csv-webscrape-lecture/blob/main/app/lib/tasks/scrape.rake)
+
+## web scraping links
 - https://github.com/oxylabs/webscraping-with-ruby
 
 - https://oxylabs.io/blog/web-scraping-with-ruby?utm_source=github&utm_medium=repo&utm_content=webscraping-with-ruby
