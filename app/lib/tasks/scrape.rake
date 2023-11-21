@@ -71,7 +71,7 @@ task({ :scrape_parse_csv => :environment }) do
   file_name = 'books.csv'
   CSV.open(file_name, 'w+',
           write_headers: true,
-          headers: %w[Title Price Availability Rating]) do |csv|
+          headers: %w[title price availability rating]) do |csv|
     rows = 0          
     50.times do |i|
       url = "https://books.toscrape.com/catalogue/page-#{i + 1}.html"
@@ -130,7 +130,7 @@ task({ :scrape_parse_csv_dynamic => :environment }) do
   file_name = 'quotes.csv'
   CSV.open(file_name, 'w+',
           write_headers: true,
-          headers: %w[Author Quote]) do |csv|
+          headers: %w[author quote]) do |csv|
     quotes.each {|q|
       quote_text = q.find_element(class: 'text').text
       author =  q.find_element(class: 'author').text
@@ -145,3 +145,32 @@ end
 # open a csv and make use of it
 ## store in active record
 ## make a chart
+task({ :read_csv => :environment }) do
+=begin
+    # read: an array of row arrays
+    data = CSV.read(file_name)
+    data[0]
+  => ["title", "price", "availability", "rating"]
+    data[1]
+  => ["A Light in the Attic", "51.77", "In stock", "3"]
+=end
+=begin
+    # parse: CSV::Table
+    csv.first.to_hash
+      => 
+      {"title"=>"A Light in the Attic",
+      "price"=>"51.77",
+      "availability"=>"In stock",
+      "rating"=>"3"}
+=end
+    Book.delete_all # for testing
+    csv = CSV.parse(File.read('books.csv'), headers: true)
+    csv.each do |row|
+      Book.create!(row.to_hash)
+    end
+    # verify:
+    Book.all.each {|b|
+      pp b
+    }
+#=end
+end

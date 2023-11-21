@@ -1,10 +1,10 @@
 # csv-webscrape-lecture
-[PowerPoint Presentation](https://docs.google.com/presentation/d/1ae_Bccugr4nWNreJn7gwuVry7bzk_rLN/edit?usp=sharing&ouid=102117242305186913702&rtpof=true&sd=true)
+[Presentation](https://docs.google.com/presentation/d/1ae_Bccugr4nWNreJn7gwuVry7bzk_rLN/edit?usp=sharing&ouid=102117242305186913702&rtpof=true&sd=true)
 ## Web scraping to CSV
 - Extract a web page, static or dynamic
 - Transform it through parsers, nokogiri or selenium
 - Load structured data into a CSV
-
+- [FirstDraft reading CSV into DB](https://guides.firstdraft.com/loading-data-from-a-csv-file-into-your-database)
 ## Gemfile requirements
 ```
 # For web-scraping
