@@ -1,0 +1,14 @@
+Started GET "/" for 127.0.0.1 at 2023-11-21 08:50:39 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/robertsfarzo/.rbenv/versions/3.2.1/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/robertsfarzo/.rbenv/versions/3.2.1/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.5ms | Allocations: 633)
+Completed 200 OK in 40ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 7355)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-21 08:52:29 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/robertsfarzo/.rbenv/versions/3.2.1/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/robertsfarzo/.rbenv/versions/3.2.1/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.5ms | Allocations: 490)
+Completed 200 OK in 13ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 4222)
+
+
