@@ -1,5 +1,5 @@
 # csv-webscrape-lecture
-# Web scraping to CSV
+## Web scraping to CSV
 - Extract a web page, static or dynamic
 - Transform it through parsers, nokogiri or selenium
 - Load structured data into a CSV
@@ -21,5 +21,5 @@
 - https://github.com/SeleniumHQ/selenium/wiki/Ruby-Bindings
 - nice test https://www.browserstack.com/guide/selenium-ruby-tutorial
 
-*headless*
+*headless browsers*
 You can get blocked for web scraping. Most website developers try to block automated requests. Therefore, you must use headless browsers and residential proxies to avoid getting blocked. You can use a headless browser such as Selenium, and you don’t need to worry about this issue. Since it is a real browser, there’s no difference between a Selenium request and a real human request.
