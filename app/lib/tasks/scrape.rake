@@ -166,7 +166,8 @@ task({ :read_csv => :environment }) do
     Book.delete_all # for testing
     csv = CSV.parse(File.read('books.csv'), headers: true)
     csv.each do |row|
-        Book.create!(row.to_hash)
+      # make sure headings are lowercase so they match table attributes
+      Book.create!(row.to_hash)
     end
     # verify:
     #Book.all.each {|b|
