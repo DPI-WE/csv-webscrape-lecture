@@ -166,7 +166,14 @@ task({ :read_csv => :environment }) do
     csv = CSV.parse(File.read('books.csv'), headers: true)
     csv.each do |row|
       # make sure headings are lowercase so they match table attributes
-      Book.create!(row.to_hash)
+      ActiveRecord::Base.transaction do # transaction 
+        # create! works just like the create method...except that it 
+        # raises an ActiveRecord::Record-Invalid exception if the creation fails.
+        # Exceptions will force a ROLLBACK that returns the database to the state before 
+        # the transaction began. Although, the objects will not have their
+        # instance data returned to their pre-transactional state.
+        Book.create!(row.to_hash)
+     end
     end
     # verify:
     #Book.all.each {|b|
