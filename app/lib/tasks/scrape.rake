@@ -166,11 +166,11 @@ task({ :read_csv => :environment }) do
     Book.delete_all # for testing
     csv = CSV.parse(File.read('books.csv'), headers: true)
     csv.each do |row|
-      Book.create!(row.to_hash)
+        Book.create!(row.to_hash)
     end
     # verify:
-    Book.all.each {|b|
-      pp b
-    }
+    #Book.all.each {|b|
+    #  pp b
+    #}
 #=end
 end
