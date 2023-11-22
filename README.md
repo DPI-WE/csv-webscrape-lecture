@@ -4,6 +4,8 @@
 - Extract a web page, static or dynamic
 - Transform it through parsers, nokogiri or selenium
 - Load structured data into a CSV
+- Static page example [Books to Scrape](https://books.toscrape.com/)
+- Dynamic page example [Quotes to Scape](https://quotes.toscrape.com/)
 - [FirstDraft reading CSV into DB](https://guides.firstdraft.com/loading-data-from-a-csv-file-into-your-database)
 ## Gemfile requirements
 ```
