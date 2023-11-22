@@ -6,7 +6,7 @@
 - Load structured data into a CSV
 - Static page example [Books to Scrape](https://books.toscrape.com/)
 - Dynamic page example [Quotes to Scape](https://quotes.toscrape.com/)
-- [FirstDraft reading CSV into DB](https://guides.firstdraft.com/loading-data-from-a-csv-file-into-your-database)
+- [FirstDraft "Reading CSV into DB"](https://guides.firstdraft.com/loading-data-from-a-csv-file-into-your-database)
 ## Gemfile requirements
 ```
 # For web-scraping

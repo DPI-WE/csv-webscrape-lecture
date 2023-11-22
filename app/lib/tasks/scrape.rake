@@ -29,7 +29,6 @@ task({ :scrape_parse => :environment }) do
     document = Nokogiri::HTML(response.body)
     # all books on this page:
     all_book_containers = document.css('article.product_pod')
-    once=true
     all_book_containers.each do |container|
       title = container.css('.image_container > a > img').first['alt']
       price = container.css('.price_color').text.delete('^0-9.')
