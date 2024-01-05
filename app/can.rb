@@ -9,7 +9,7 @@ csv = CSV.parse(File.read('can.csv'), headers: true)
 #pp csv.size
 
 format_string = "%25s %16s %16s %35s"
-puts sprintf(format_string,"Student", "Sinatra (43 max)", "Project (22 max)","SIS Login ID")
+puts sprintf(format_string,"Student", "Sinatra 43", "Project 22","email")
 ct = 0
 csv.each do |row|
   r = row.to_hash
