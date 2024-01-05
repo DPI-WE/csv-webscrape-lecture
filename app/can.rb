@@ -8,17 +8,18 @@ end
 csv = CSV.parse(File.read('can.csv'), headers: true)
 #pp csv.size
 
-format_string = "%25s %10s %15s"
-pp sprintf(format_string,"Student", "Sinatra (43 max)", "Project (22 max)")
+format_string = "%25s %16s %16s %35s"
+puts sprintf(format_string,"Student", "Sinatra (43 max)", "Project (22 max)","SIS Login ID")
 ct = 0
 csv.each do |row|
   r = row.to_hash
   #pp "#{r.fetch("Student")} #{r.fetch ("Sinatra Current Points")} #{r.fetch ("Project Current Points")} "
 
   if who.has_key?(r.fetch("Student"))
-    pp sprintf(format_string, r.fetch("Student"), 
+    puts sprintf(format_string, r.fetch("Student"), 
        r.fetch("Sinatra Current Points"), 
-       r.fetch("Project Current Points"))
+       r.fetch("Project Current Points"),
+       r.fetch("SIS Login ID"))
     #pp row
     ct += 1
   end
